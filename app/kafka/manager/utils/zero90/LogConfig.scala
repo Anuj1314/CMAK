@@ -173,8 +173,8 @@ object LogConfig extends TopicConfigs {
     */
   def fromProps(defaults: java.util.Map[_ <: Object, _ <: Object], overrides: Properties): LogConfig = {
     val props = new Properties()
-    props.putAll(defaults.asInstanceOf[java.util.Map[_, _]])
-    props.putAll(overrides.asMap)
+    props.putAll(defaults)
+    props.putAll(overrides)
     LogConfig(props)
   }
 
