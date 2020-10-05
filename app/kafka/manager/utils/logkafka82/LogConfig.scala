@@ -174,7 +174,7 @@ object LogConfig extends LogkafkaNewConfigs {
    */
   def fromProps(defaults: Properties, overrides: Properties): LogConfig = {
     val props = new Properties(defaults)
-    props.putAll(overrides.asMap)
+    props.putAll(overrides)
     fromProps(props)
   }
 
